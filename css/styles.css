@@ -134,10 +134,20 @@ section {
     }
 }
 
+section{
+    transition: transform .2s ease, opacity .2s ease;
+    opacity: .5;
+}
+
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
     text-align: right; 
+}
+
+section.active{
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 /* Background Circles */

@@ -96,9 +96,10 @@ function windowScrollEvent(){
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.menu__link');
     const windowScroll = window.scrollY;
+    const offset = 50;
     for(let i in sections){
         const section = sections[i];
-        if(section.offsetTop <= windowScroll && windowScroll <= section.offsetTop + section.offsetHeight){
+        if(section.offsetTop <= windowScroll + offset && windowScroll + offset <= section.offsetTop + section.offsetHeight){
             navLinks.forEach(nav => {
                 nav.classList.remove('active');
             });
