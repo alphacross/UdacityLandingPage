@@ -70,8 +70,18 @@ section {
     text-align: right;
 }
 
+#navbar__list.hidden {
+    display: none;
+}
+
 .navbar__menu li {
     display: inline-block;
+}
+
+@media (max-width: 600px){
+    .navbar__menu li {
+        width: 25%;
+    }
 }
 
 .navbar__menu .menu__link {
@@ -82,7 +92,8 @@ section {
     color: #000;
 }
 
-.navbar__menu .menu__link:hover {
+
+.navbar__menu .menu__link.active, .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
